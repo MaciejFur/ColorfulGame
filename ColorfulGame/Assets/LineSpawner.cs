@@ -23,7 +23,7 @@ public class LineSpawner : MonoBehaviour
             Instantiate(
                 linePrefab,
                 new Vector2(transform.position.x + Mathf.Clamp(Random.Range(0f, 10f), 0, xMax), transform.position.y),
-                Quaternion.identity);   
+                Quaternion.Euler(0,0,90f));   
         }
     }
 }

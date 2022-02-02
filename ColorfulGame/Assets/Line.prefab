@@ -12,10 +12,12 @@ GameObject:
   - component: {fileID: 1609654129198706402}
   - component: {fileID: 1609654129198706403}
   - component: {fileID: 1609654129198706400}
-  - component: {fileID: 1609654129198706401}
+  - component: {fileID: 3486956688973192717}
+  - component: {fileID: 3220634878402374093}
+  - component: {fileID: -1113489076020591438}
   m_Layer: 0
   m_Name: Line
-  m_TagString: Untagged
+  m_TagString: Line
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +66,7 @@ MonoBehaviour:
   colorEnd: {r: 1, g: 1, b: 1, a: 1}
   start: {x: 0, y: 0, z: 0}
   end: {x: 1, y: 0, z: 0}
-  thickness: 0.125
+  thickness: 0.25
   thicknessSpace: 0
   endCaps: 0
   matchDashSpacingToSize: 1
@@ -126,24 +128,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!50 &1609654129198706401
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!65 &3486956688973192717
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609654129198706406}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.25, z: 1}
+  m_Center: {x: 0.4944147, y: 0.0060789585, z: 0}
+--- !u!54 &3220634878402374093
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609654129198706406}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 122
+  m_CollisionDetection: 1
+--- !u!114 &-1113489076020591438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609654129198706406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1f13f00cab70c47aeac7499be78db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 0}
+  colors:
+  - {r: 1, g: 0.81639206, b: 0, a: 1}
+  - {r: 0, g: 1.5529412, b: 2.9960785, a: 1}
+  - {r: 0.7490196, g: 0, b: 0.46666667, a: 1}
+  - {r: 0, g: 0.7490196, b: 0.3254902, a: 1}
